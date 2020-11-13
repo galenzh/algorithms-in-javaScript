@@ -31,5 +31,5 @@ let arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 console.log(binarySearchRecursive(arr, 8, 0, arr.length)); // find at index 7
 console.log(binarySearchRecursive(arr, 11, 0, arr.length)); // can't find, return -1
 
-console.log(binarySearchIterative(arr, 8, 0, arr.length)); // find at index 7
-console.log(binarySearchIterative(arr, 11, 0, arr.length)); // can't find, return -1
+console.log(binarySearchIterative(arr, 8)); // find at index 7
+console.log(binarySearchIterative(arr, 11)); // can't find, return -1
