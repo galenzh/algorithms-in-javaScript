@@ -2,8 +2,8 @@
 class Promise {
   constructor(fn) {
     this.callbacks = [];
-    this.state = "pending"; //增加状态
-    this.value = null; //保存结果
+    this.state = "pending"; 
+    this.value = null;
     fn(this._resolve.bind(this));
   }
   then(onFulfilled) {
@@ -19,7 +19,6 @@ class Promise {
       this.callbacks.push(callback);
       return;
     }
-    //如果then中没有传递任何东西
     if (!callback.onFulfilled) {
       callback.resolve(this.value);
       return;
@@ -28,8 +27,8 @@ class Promise {
     callback.resolve(ret);
   }
   _resolve(value) {
-    this.state = "fulfilled"; //改变状态
-    this.value = value; //保存结果
+    this.state = "fulfilled";
+    this.value = value; 
     this.callbacks.forEach((callback) => this._handle(callback));
   }
 }
