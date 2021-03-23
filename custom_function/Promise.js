@@ -1,4 +1,3 @@
-//完整的实现
 class Promise {
   constructor(fn) {
     this.callbacks = [];
